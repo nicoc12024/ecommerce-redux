@@ -34,7 +34,7 @@ function Navbar() {
       </div>
       {/* Cart */}
       <div
-        className="fixed top-0 right-0 cursor-pointer bg-black p-3"
+        className="fixed top-0 right-0 cursor-pointer bg-black p-3 z-10"
         onClick={() => dispatch(open())}
       >
         <BiShoppingBag className="text-4xl text-white" />

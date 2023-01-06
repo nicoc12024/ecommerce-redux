@@ -1,18 +1,23 @@
 import React from "react";
 import { add } from "../State/Slice/CartSlice";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 function ShoppingItem({ item }) {
   const dispatch = useDispatch();
+
   const { id, image, imageHover, price, name } = item;
+  console.log(id);
 
   return (
     <div className="min-w-[200px] mx-auto">
       {/* Images */}
-      <div className="bg-grey relative flex items-center justify-center cursor-pointer ">
-        <img src={image} alt="" className="absolute hover:opacity-0" />
-        <img src={imageHover} alt="" />
-      </div>
+      <Link to={`/detail/${id}`}>
+        <div className="bg-grey relative flex items-center justify-center cursor-pointer ">
+          <img src={image} alt="" className="absolute hover:opacity-0" />
+          <img src={imageHover} alt="" />
+        </div>
+      </Link>
       {/* Info Item */}
       <div className="flex flex-col text-center justify-between items-center ">
         <div className="my-6">

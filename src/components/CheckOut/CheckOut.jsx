@@ -17,7 +17,7 @@ function CheckOut() {
 
   return (
     <div className="fixed top-0 left-0 bg-transparentBlack w-full h-screen">
-      <div className="h-full bg-neutral-300 sm:w-[40rem] min-w-[15rem] overflow-y-auto">
+      <div className="h-full p-4 bg-neutral-300 sm:w-[40rem] min-w-[15rem] overflow-y-auto">
         <div className="p-6 flex items-center justify-between">
           <div
             className="flex items-center cursor-pointer"
