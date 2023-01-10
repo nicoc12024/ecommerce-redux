@@ -13,7 +13,7 @@ const ItemDetails = () => {
   const { name, price, image } = item;
   return (
     <div className="min-h-screen w-full flex items-center justify-center p-4">
-      {/* Return Home botton */}
+      {/* Return Home button */}
       <Link
         to="/"
         className="fixed flex items-center top-0 left-0 cursor-pointer bg-black text-white font-bold p-3"
