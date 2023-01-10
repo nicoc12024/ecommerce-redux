@@ -70,14 +70,7 @@ const CartSlice = createSlice({
       }
       return state;
     },
-    // // Total price of all items of the array
-    // total: (state) => {
-    //   let total = 0;
-    //   state.cartItems.forEach((cartItem) => {
-    //     total += cartItem.amount * cartItem.price;
-    //   });
-    //   return total;
-    // },
+
     clear: (state) => {
       state.cartItems = [];
       state.amount = 0;

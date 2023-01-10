@@ -20,15 +20,15 @@ function CheckOut() {
       <div className="h-full p-4 bg-neutral-300 sm:w-[40rem] min-w-[15rem] overflow-y-auto">
         <div className="p-6 flex items-center justify-between">
           <div
-            className="flex items-center cursor-pointer"
+            className="flex items-center cursor-pointer font-bold"
             onClick={() => dispatch(open())}
           >
-            <HiChevronLeft />
+            <HiChevronLeft className="text-2xl" />
             <span className="uppercase text-[0.95rem] select-none">
               Continue Shopping
             </span>
           </div>
-          <div>Shopping Bag ({amount})</div>
+          <div className="font-bold uppercase">Shopping Bag ({amount})</div>
         </div>
         <div className="mt-8">
           {cartItems.length === 0 ? (

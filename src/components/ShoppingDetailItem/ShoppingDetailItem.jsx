@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { add } from "../State/Slice/CartSlice";
+import { open } from "../State/Slice/CheckOutSlice";
 import { useDispatch } from "react-redux";
 import { items } from "../../itemsList";
 import { HiChevronLeft } from "react-icons/hi";
@@ -31,7 +32,13 @@ const ItemDetails = () => {
             reiciendis, ad iure accusantium magni, quisquam nisi asperiores incidunt
             quibusdam dolores deleniti. Fugiat, nisi magnam.
           </p>
-          <button className="bg-black text-white p-3" onClick={() => dispatch(add(item))}>
+          <button
+            className="bg-black text-white p-3"
+            onClick={() => {
+              dispatch(add(item));
+              dispatch(open());
+            }}
+          >
             Add To Cart
           </button>
         </div>

@@ -1,13 +1,14 @@
 import React from "react";
 import { add } from "../State/Slice/CartSlice";
 import { useDispatch } from "react-redux";
+import { open } from "../State/Slice/CheckOutSlice";
+
 import { Link } from "react-router-dom";
 
 function ShoppingItem({ item }) {
   const dispatch = useDispatch();
 
   const { id, image, imageHover, price, name } = item;
-  console.log(id);
 
   return (
     <div className="min-w-[200px] mx-auto">
@@ -27,7 +28,10 @@ function ShoppingItem({ item }) {
         </div>
         <button
           className="bg-black text-white p-3 w-full ease-in-out duration-200 hover:bg-yellow-600"
-          onClick={() => dispatch(add(item))}
+          onClick={() => {
+            dispatch(add(item));
+            dispatch(open());
+          }}
         >
           Add To Cart
         </button>
